@@ -42,4 +42,6 @@ class MainViewModelImpl(
             GetItemListInteractor.Result.OnError -> State.ShowError
         }
     }
+
+    data class Item(val id: Int, val result: String)
 }

@@ -4,10 +4,11 @@ import com.rsstest.core.BaseViewModel
 import com.rsstest.core.EventPath
 import com.rsstest.ui.MainViewModel.Path
 import com.rsstest.ui.MainViewModel.State
+import com.rsstest.ui.MainViewModelImpl.Item
 
 abstract class MainViewModel : BaseViewModel<State, Path>() {
     sealed class State {
-        data class ItemListLoaded(val items: List<String>) : State()
+        data class ItemListLoaded(val items: List<Item>) : State()
         object ShowError : State()
     }
 
