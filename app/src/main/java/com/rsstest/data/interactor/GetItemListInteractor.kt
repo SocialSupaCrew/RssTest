@@ -46,9 +46,15 @@ class GetItemListInteractorImpl(
         string1: String,
         string2: String
     ): List<Item> {
-
-
-        return emptyList()
+        return (1..limit).map { i ->
+            val result = when {
+                i % (int1 * int2) == 0 -> string1 + string2
+                i % int1 == 0 -> string1
+                i % int2 == 0 -> string2
+                else -> i.toString()
+            }
+            Item(i, result)
+        }
     }
 
     private fun onSuccess(songs: List<Item>) {
