@@ -57,8 +57,8 @@ class GetItemListInteractorImpl(
         }
     }
 
-    private fun onSuccess(songs: List<Item>) {
-        liveData.value = Result.OnSuccess(songs)
+    private fun onSuccess(items: List<Item>) {
+        liveData.value = Result.OnSuccess(items)
     }
 
     private fun onError(throwable: Throwable) {

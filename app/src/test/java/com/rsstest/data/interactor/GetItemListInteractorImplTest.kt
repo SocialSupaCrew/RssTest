@@ -16,8 +16,7 @@ import org.junit.Test
 @ExperimentalCoroutinesApi
 class GetItemListInteractorImplTest {
 
-    @Rule
-    @JvmField
+    @get:Rule
     val instantTaskRule = InstantTaskExecutorRule()
 
     private lateinit var subject: GetItemListInteractorImpl
