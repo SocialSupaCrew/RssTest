@@ -20,7 +20,7 @@ interface GetItemListInteractor : Interactor<Result> {
 }
 
 class GetItemListInteractorImpl(
-    private val dispatcher: CoroutineDispatcher = Dispatchers.IO
+    private val dispatcher: CoroutineDispatcher = Dispatchers.Main
 ) : BaseInteractor<Result>(), GetItemListInteractor {
 
     override suspend fun execute(
